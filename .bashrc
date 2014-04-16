@@ -136,6 +136,7 @@ export TOMCAT_HOME=~/programs/apache-tomcat-7.0.32
 alias reload='source ~/.bashrc'
 alias timestamp='date +%s'
 alias tablesaw='export CLASSPATH=tools/`ls -1 tools | grep tablesaw`'
+alias kairos='cd /opt/kairosdb'
 
 function mountiso() { sudo mount -o loop "$@" /mnt/iso ;}
 
