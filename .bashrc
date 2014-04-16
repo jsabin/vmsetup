@@ -132,28 +132,11 @@ PATH=$M2_HOME/bin:/usr/pkg/sbin:/usr/pkg/bin:/usr/pkg/sbin:/usr/pkg/bin:/usr/bin
 export TOMCAT_HOME=~/programs/apache-tomcat-7.0.32
 
 # jeff's Aliases
-alias dash='cd ~/dev/dashboard'
-alias dashg='cd ~/dev/dashboardGadgets'
-alias dev='cd ~/dev'
-alias cassandra='/home/jsabin/programs/apache-cassandra-1.2.0/bin/cassandra -f'
-alias collect='cd ~/dev/collector'
-alias desktop='ssh -X 10.92.0.10'
-alias kairos='cd ~/dev/kairosdb'
-alias ret='cd ~/dev/retention'
+
 alias reload='source ~/.bashrc'
-alias home='cd ~'
-alias jenkins='ssh -X 10.92.4.9'
-alias mountfs1='sudo mount -t cifs -o user=corp/jsabin,rw,nosetuids,noperm //np-vm-fs1.corp.proofpoint.com/Develop /home/jsabin/mount/fs1-develop'
-alias tomcat='cd /home/jsabin/programs/apache-tomcat-7.0.32/bin'
-alias sshhome='ssh -X jeff@jsabin.dnsdynamic.com -p 2022'
-alias sshhome2='ssh -X jeff@71.199.36.183 -p 2022'
 alias timestamp='date +%s'
 alias tablesaw='export CLASSPATH=tools/`ls -1 tools | grep tablesaw`'
 
-# AWS instances
-alias aws1='ssh -i aws_rsa.pem ubuntu@ec2-54-215-109-24.us-west-1.compute.amazonaws.com'
-
-alias teest='echo helellofso'
 function mountiso() { sudo mount -o loop "$@" /mnt/iso ;}
 
 cd() { if [[ "$1" =~ ^\.\.+$ ]];then local a dir;a=${#1};while [ $a -ne 1 ];do dir=${dir}"../";((a--));done;builtin cd $dir;else builtin cd "$@";fi ;}
